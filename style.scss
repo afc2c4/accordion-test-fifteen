@@ -14,9 +14,48 @@ $ali) {
     padding: 0px;
     box-sizing: border-box;
     body {
+        @include flex(center,
+        null);
         width: 100%;
         min-height: 100vh;
         background-color: $bgc;
         color: $color-1;
+        font-family: 'Poppins';
+    }
+}
+
+.container {
+    width: 80%;
+    h1 {
+        text-align: center;
+        font-weight: 300px;
+        margin: 50px 0px;
+    }
+}
+
+.accordion {
+    @include flex(space-between,
+    null);
+    border-bottom: 2px solid $color-2;
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $color-2;
+    }
+}
+
+.panel {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 1s ease;
+    p {
+        text-align: justify;
+        margin: 10px 0px 10px 20px;
+    }
+    .open {
+        color: $color-2;
     }
 }
