@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$bgc: #000;
+$color-1: #fff;
+$color-2: red;
+@mixin flex ($jus,
+$ali) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    body {
+        width: 100%;
+        min-height: 100vh;
+        background-color: $bgc;
+        color: $color-1;
+    }
+}
